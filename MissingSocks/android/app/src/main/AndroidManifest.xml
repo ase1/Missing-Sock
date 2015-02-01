@@ -35,14 +35,6 @@
             android:name=".add_edit_sock"
             android:label="@string/title_activity_add_edit_sock" >
         </activity>
-        <activity
-            android:name=".blankactivitywithfrag"
-            android:label="@string/title_activity_blankactivitywithfrag" >
-        </activity>
-        <activity
-            android:name=".NavDrawer"
-            android:label="@string/title_activity_nav_drawer" >
-        </activity>
     </application>
 
 </manifest>

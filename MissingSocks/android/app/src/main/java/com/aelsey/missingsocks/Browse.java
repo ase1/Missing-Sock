@@ -1,6 +1,7 @@
 package com.aelsey.missingsocks;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -15,11 +16,13 @@ import android.view.*;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import java.util.ArrayList;
 
-public class Browse extends ActionBarActivity {
+import com.melnykov.fab.FloatingActionButton;
+
+import java.util.ArrayList;import java.util.Locale;
 
 
+public class Browse extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,9 @@ public class Browse extends ActionBarActivity {
         fragmentTransaction.replace(R.id.listfragment, fragment);
         fragmentTransaction.commit();
 
+        ListView listView = (ListView) findViewById(android.R.id.list);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.attachToListView(listView);
     }
 
     @Override
