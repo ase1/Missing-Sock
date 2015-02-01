@@ -33,7 +33,7 @@
         </activity>
         <activity
             android:name=".view_sock"
-            android:label="@string/title_activity_view_sock" >
+            android:label="@string/title_view_sock" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,9 +1,11 @@
 package com.aelsey.missingsocks;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class view_sock extends ActionBarActivity {
@@ -20,6 +22,12 @@ public class view_sock extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_view_sock, menu);
         return true;
+    }
+
+    public void backToStart(View view)
+    {
+        Intent intent = new Intent(this, Browse.class);
+        startActivity(intent);
     }
 
     @Override
