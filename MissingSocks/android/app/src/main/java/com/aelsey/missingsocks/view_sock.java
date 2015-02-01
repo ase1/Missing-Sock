@@ -1,10 +1,11 @@
 package com.aelsey.missingsocks;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
 
 public class view_sock extends ActionBarActivity {
 
@@ -35,5 +36,11 @@ public class view_sock extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void backtohoome(View view)
+    {
+        Intent intent = new Intent(this, Browse.class);
+        startActivity(intent);
     }
 }

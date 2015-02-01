@@ -54,4 +54,5 @@
     <string name="action_example">Example action</string>
     <string name="title_activity_filter">Filter</string>
 
+    <string name="title_activity_view_sock">View Sock</string>
 </resources>

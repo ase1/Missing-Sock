@@ -139,5 +139,6 @@
         android:id="@+id/back_button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="backtohome"/>
 </RelativeLayout>
