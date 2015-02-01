@@ -10,6 +10,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.*;
 
+/*
+import org.apache.http.Header;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.*;
+import com.loopj.android.http.*;
+*/
 
 
 public class Browse extends ActionBarActivity {
@@ -25,6 +33,13 @@ public class Browse extends ActionBarActivity {
 
         setTitle("Browse Socks");
 
+
+        /*try {
+            getPublicTimeline();
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }*/
     }
 
     public void addASock(View view)
@@ -32,6 +47,27 @@ public class Browse extends ActionBarActivity {
         Intent intent = new Intent(this, add_edit_sock.class);
         startActivity(intent);
     }
+
+
+    /*public void getPublicTimeline() throws JSONException {
+        RequestParams params = new RequestParams();
+        params.put("userId","username");
+        TwitterRestClient.post("check/", params, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                System.out.println(statusCode + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                System.out.println(response.toString());
+                // If the response is JSONObject instead of expected JSONArray
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
+                System.out.println(statusCode + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+                System.out.println(timeline.toString());
+            }
+        });
+    }*/
 
 
     @Override

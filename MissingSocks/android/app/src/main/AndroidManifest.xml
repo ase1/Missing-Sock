@@ -16,7 +16,7 @@
 		android:screenOrientation="portrait">
         <activity
             android:name=".Browse"
-            android:label="SockMarket">
+            android:label="SockHarmony">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

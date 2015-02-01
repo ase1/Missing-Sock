@@ -10,11 +10,16 @@
     <style name="CustomActionBarTheme"
         parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="floatingActionButtonStyle">@style/AppTheme.Fab</item>
     </style>
 
     <!-- ActionBar styles -->
     <style name="MyActionBar"
-        parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">@drawable/argyle</item>
+    </style>
+
+    <style name="AppTheme.Fab" parent="FloatingActionButton">
+        <item name="floatingActionButtonColor">#527183</item>
     </style>
 </resources>
