@@ -48,7 +48,7 @@
 
     <!-- Artist Name -->
     <TextView
-        android:id="@+id/sumbitted"
+        android:id="@+id/submitted"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/location"

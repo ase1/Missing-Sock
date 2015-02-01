@@ -17,12 +17,15 @@ public class LazyAdapter extends BaseAdapter {
     private Activity activity;
     private ArrayList<HashMap> data;
     private static LayoutInflater inflater=null;
-    public ImageLoader imageLoader;
+    //ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
+    //ImageLoader.getInstance().init(config);
+
+    //public ImageLoader imageLoader;
     public LazyAdapter(Activity a, ArrayList<HashMap> d) {
         activity = a;
-        data=d;
+        data = d;
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        imageLoader=new ImageLoader(activity.getApplicationContext());
+        //imageLoader=new ImageLoader(activity.getApplicationContext());
     }
 
     public int getCount() {
@@ -40,18 +43,19 @@ public class LazyAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View vi=convertView;
         if(convertView==null)
-        vi = inflater.inflate(R.layout.list_row, null);
-        TextView title = (TextView)vi.findViewById(R.id.title); // title
-        TextView artist = (TextView)vi.findViewById(R.id.artist); // artist name
-        TextView duration = (TextView)vi.findViewById(R.id.duration); // duration
+            vi = inflater.inflate(R.layout.list_row, null);
+        TextView sockname = (TextView)vi.findViewById(R.id.sockname); // title
+        TextView location = (TextView)vi.findViewById(R.id.location); // artist name
+        TextView submitted = (TextView)vi.findViewById(R.id.submitted); // artist name
         ImageView thumb_image=(ImageView)vi.findViewById(R.id.list_image); // thumb image
-        HashMap<String> song = new HashMap<String>();
+        HashMap<String, String> song = new HashMap<String, String>();
         song = data.get(position);
         // Setting all values in listview
-        title.setText(song.get(CustomizedListView.KEY_TITLE));
-        artist.setText(song.get(CustomizedListView.KEY_ARTIST));
-        duration.setText(song.get(CustomizedListView.KEY_DURATION));
-        imageLoader.DisplayImage(song.get(CustomizedListView.KEY_THUMB_URL), thumb_image);
+        sockname.setText(song.get(CustomizedListView.KEY_SOCKNAME));
+        location.setText(song.get(CustomizedListView.KEY_LOCATION));
+        submitted.setText(song.get(CustomizedListView.KEY_SUBMITTED));
+        //lost/found goes here
+        //imageLoader.DisplayImage(song.get(CustomizedListView.KEY_THUMB_URL), thumb_image);
         return vi;
         }
 }
