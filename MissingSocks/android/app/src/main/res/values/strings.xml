@@ -6,6 +6,8 @@
     <string name="action_settings">Settings</string>
     <string name="filter">Filter</string>
     <string name="sockfiller">White Crew Sock</string>
+    <string name="locfiller">WRC</string>
+    <string name="subfiller">Submitted 4 hours ago by Roshni</string>
     <string name="title_activity_profile">profile</string>
 
     <string-array name="universities">

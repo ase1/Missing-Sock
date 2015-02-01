@@ -56,7 +56,7 @@
         android:textSize="10dip"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="@string/submfiller" />
+        android:text="@string/subfiller" />
 
     <!-- lost/found -->
     <TextView
