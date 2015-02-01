@@ -1,21 +1,26 @@
 package com.aelsey.missingsocks;
 
 import android.app.ListActivity;
+import android.app.ActionBar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import java.util.ArrayList;
-import org.w3c.dom.Element;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 
-public class Browse extends ListActivity {
-    ListView listView;
+public class Browse extends ListActivity implements ActionBar.OnNavigationListener {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_browse, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
 
@@ -24,27 +29,42 @@ public class Browse extends ListActivity {
         sockName.add("White Crew Sock");
         sockName.add("Black Ankle Sock");
         sockName.add("Pink Knee-High Sock");
+
         ArrayList<String> location = new ArrayList<String>();
         location.add("Duncan");
         location.add("Hanszen");
         location.add("WRC");
+
         ArrayList<String> submitted = new ArrayList<String>();
         submitted.add("Submitted today by Roshni");
         submitted.add("Submitted two days ago by Andrew");
         submitted.add("Submitted a week ago by Mohith");
 
-        listView = (ListView) findViewById(R.id.listView);
-        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_row, R.id.listView,sockName));
+        ArrayList<String> found = new ArrayList<String>();
+        found.add("Found");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
+        found.add("Lost");
 
+        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_row, R.id.sockname,sockName));
+        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_row, R.id.location,location));
+        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_row, R.id.submitted,submitted));
+        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_row, R.id.found,found));
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_browse, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -59,5 +79,10 @@ public class Browse extends ListActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(int i, long l) {
+        return true;
     }
 }

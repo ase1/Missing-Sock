@@ -24,7 +24,6 @@
 
     <string name="laundryrooms">Laundry Rooms</string>
     <string name="title_activity_add_edit_sock">add_edit_sock</string>
-
     <string name="multiother">Multi-colored/Other</string>
     <string name="gender_label">Sock Gender</string>
 
@@ -46,4 +45,6 @@
     </string-array>
 
     <string name="description">Description</string>
+    <string name="title_activity_blankactivitywithfrag">blankactivitywithfrag</string>
+
 </resources>
