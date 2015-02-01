@@ -56,18 +56,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/white"
         android:background="#ffffffff"
         android:layout_below="@+id/laundryrooms"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="setselected"/>
+        android:layout_alignParentStart="true"/>
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/black"
         android:background="#ff000000"
@@ -75,8 +74,8 @@
         android:layout_toRightOf="@+id/white"
         android:layout_toEndOf="@+id/white" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/beige"
         android:background="#ffffd9a8"
@@ -84,8 +83,8 @@
         android:layout_toRightOf="@+id/black"
         android:layout_toEndOf="@+id/black" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/gray"
         android:background="#ff808080"
@@ -93,8 +92,8 @@
         android:layout_toRightOf="@+id/beige"
         android:layout_toEndOf="@+id/beige" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/brown"
         android:background="#ff9a5512"
@@ -102,8 +101,8 @@
         android:layout_toRightOf="@+id/gray"
         android:layout_toEndOf="@+id/gray" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/red"
         android:background="#ffff0007"
@@ -111,8 +110,8 @@
         android:layout_toRightOf="@+id/brown"
         android:layout_toEndOf="@+id/brown" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/orange"
         android:background="#ffff7914"
@@ -120,8 +119,8 @@
         android:layout_toRightOf="@+id/red"
         android:layout_toEndOf="@+id/red" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/pink"
         android:background="#ffff54ab"
@@ -129,8 +128,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/yellow"
         android:background="#fffffb23"
@@ -138,8 +137,8 @@
         android:layout_toRightOf="@+id/pink"
         android:layout_toEndOf="@+id/pink" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/green"
         android:background="#ff15ff00"
@@ -147,8 +146,8 @@
         android:layout_toRightOf="@+id/yellow"
         android:layout_toEndOf="@+id/yellow" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/blue"
         android:background="#ff053bff"
@@ -156,8 +155,8 @@
         android:layout_toRightOf="@+id/green"
         android:layout_toEndOf="@+id/green" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="45sp"
         android:layout_height="wrap_content"
         android:id="@+id/purple"
         android:background="#ffb51bff"
@@ -165,8 +164,8 @@
         android:layout_toRightOf="@+id/blue"
         android:layout_toEndOf="@+id/blue" />
 
-    <Button
-        android:layout_width="50sp"
+    <CheckBox
+        android:layout_width="90sp"
         android:layout_height="wrap_content"
         android:id="@+id/other"
         android:text="@string/multiother"
@@ -174,7 +173,8 @@
         android:layout_below="@+id/white"
         android:layout_toRightOf="@+id/purple"
         android:layout_alignRight="@+id/orange"
-        android:layout_alignEnd="@+id/orange" />
+        android:layout_alignEnd="@+id/orange"
+        android:textSize="10dp" />
 
     <TextView
         android:layout_width="wrap_content"

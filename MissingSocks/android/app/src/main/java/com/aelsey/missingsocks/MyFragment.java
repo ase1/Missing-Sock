@@ -1,4 +1,4 @@
-/*package com.aelsey.missingsocks;
+package com.aelsey.missingsocks;
 
 import android.app.ListFragment;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ public class MyFragment extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        
+
         //get sock info
         ArrayList<String> sockName = new ArrayList<String>();
         sockName.add("White Crew Sock");
@@ -61,132 +61,14 @@ public class MyFragment extends ListFragment {
         found.add("Found");
         found.add("Lost");
 
-        String [][] from = {location.toString(),submitted.toString(),found.toString(),sockName.toString()};
-        int [] to = {R.id.location,R.id.subdetails,R.id.found,R.id.sockname};
-        for (int i = 1; i<8; i++)
-            this.setListAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_row,to,from));
+
+        this.setListAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_row, R.id.sockname,sockName));
+        this.setListAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_row, R.id.location,location));
+        this.setListAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_row, R.id.subdetails,submitted));
+        this.setListAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_row, R.id.found,found));
     }
 
     public void onListItemClick(ListView listView, View view, int position, long id) {
 
     }
 }
-
-*/
-
-package com.aelsey.missingsocks;
-
-import android.app.ListFragment;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import com.aelsey.missingsocks.R;
-
-import java.util.ArrayList;
-import com.aelsey.missingsocks.Sock;
-
-public class MyFragment extends ListFragment {
-
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        ArrayList<String> color = new ArrayList<String>();
-        color.add("White");
-        color.add("Black");
-        color.add("Gray");
-        color.add("Pink");
-        color.add("Black");
-        color.add("Brown");
-        color.add("White");
-        color.add("Multi/Other");
-        color.add("White");
-        color.add("Green");
-
-        ArrayList<String> style = new ArrayList<String>();
-        style.add("Crew Sock");
-        style.add("Ankle Sock");
-        style.add("Knee-High Sock");
-        style.add("Crew Sock");
-        style.add("Ankle Sock");
-        style.add("Ankle Sock");
-        style.add("Crew Sock");
-        style.add("Ankle Sock");
-        style.add("Crew Sock");
-        style.add("Ankle Sock");
-
-        ArrayList<String> location = new ArrayList<String>();
-        location.add("Duncan");
-        location.add("Hanszen");
-        location.add("Will Rice");
-        location.add("Will Rice");
-        location.add("Baker");
-        location.add("Brown");
-        location.add("Hanszen");
-        location.add("Sid Rich");
-        location.add("Baker");
-        location.add("Will Rice");
-
-        ArrayList<CharSequence> date = new ArrayList<CharSequence>();
-        date.add("20 minutes ago");
-        date.add("3 hours ago");
-        date.add("4 hours ago");
-        date.add("5 hours ago");
-        date.add("12 hours ago");
-        date.add("12 hours ago");
-        date.add("15 hours ago");
-        date.add("21 hours ago");
-        date.add("2 days ago");
-        date.add("2 days ago");
-
-        ArrayList<CharSequence> firstname = new ArrayList<CharSequence>();
-        firstname.add("Josiah");
-        firstname.add("Andrew");
-        firstname.add("Matthew");
-        firstname.add("Megan");
-        firstname.add("Stephenie");
-        firstname.add("Haibo");
-        firstname.add("Lily");
-        firstname.add("Lucia");
-        firstname.add("David");
-        firstname.add("Aloysius");
-
-        ArrayList<Boolean> found = new ArrayList<Boolean>();
-        for (int i=0; i<10; i++)
-            found.add(Math.random()>.5);
-
-        ArrayList<Sock> socks = new ArrayList<Sock>();
-        for (int i=0; i<10; i++)
-        {
-            socks.add(new Sock(date.get(i), found.get(i), "Rice", location.get(i), color.get(i),
-                    style.get(i), "", "", new Person(firstname.get(i), "", "", "", true, i, "")));
-        }
-        ArrayList<String> sockName= new ArrayList<String>();
-        ArrayList<String> subDetails= new ArrayList<String>();
-        System.out.println("working");
-        ArrayList<String> lostfound= new ArrayList<String>();
-        for (int i=0;i<10;i++)
-        {
-            System.out.println(i);
-            sockName.add(socks.get(i).sockName().toString());
-            subDetails.add(socks.get(i).subDetails().toString());
-            if (socks.get(i).getLostFound())
-                lostfound.add("Lost");
-            else
-                lostfound.add("Found");
-
-            String [] from = {location.get(i).toString(),subDetails.get(i).toString(),lostfound.get(i)toString(),sockName.get(i).toString()};
-
-        }
-
-        int [] to = {R.id.location,R.id.subdetails,R.id.found,R.id.sockname};
-        for (int i = 1; i<8; i++)
-            this.setListAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_row,to,from(i)));
-    }
-
-
-    public void onListItemClick(ListView listView, View view, int position, long id) {
-
-    }
-}
-
