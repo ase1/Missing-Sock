@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="@string/sockfiller"
+        android:text="@string/sockname"
         android:textColor="#00AA00"
         android:typeface="sans"
         android:textSize="15dip"
@@ -45,11 +45,11 @@
         android:textSize="10dip"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="@string/locfiller" />
+        android:text="@string/location" />
 
     <!-- Artist Name -->
     <TextView
-        android:id="@+id/submitted"
+        android:id="@+id/subdetails"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/location"
@@ -57,7 +57,7 @@
         android:textSize="10dip"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="@string/subfiller" />
+        android:text="@string/subdetails" />
 
     <!-- lost/found -->
     <TextView
@@ -70,7 +70,8 @@
         android:layout_marginRight="5dip"
         android:textSize="10dip"
         android:textColor="#000000"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:text="@string/lostfound"/>
 
 
 </RelativeLayout>

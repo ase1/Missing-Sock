@@ -12,10 +12,11 @@ public class Sock {
     private String color;
     private String style;
     private String gender;
-    private String description;
+    private CharSequence description;
+    private Person submitter;
 
     public Sock(CharSequence date, boolean lostFound, String university, String laundryroom,
-                String color, String style, String gender, String description) {
+                String color, String style, String gender, CharSequence description, Person submitter) {
         this.date = date;
         this.lostFound = lostFound;
         this.university = university;
@@ -24,6 +25,55 @@ public class Sock {
         this.style = style;
         this.gender = gender;
         this.description = description;
+        this.submitter = submitter;
+    }
+
+    CharSequence getDate()
+    {
+        return this.date;
+    }
+    boolean getLostFound()
+    {
+        return this.lostFound;
+    }
+    String getUniversity()
+    {
+        return this.university;
+    }
+    String getLaundryRoom()
+    {
+        return this.laundryroom;
+    }
+
+    String getColor()
+    {
+        return this.color;
+    }
+    String getStyle()
+    {
+        return this.style;
+    }
+    String getGender()
+    {
+        return this.gender;
+    }
+    CharSequence getDescription()
+    {
+        return this.description;
+    }
+    Person getSubmitter()
+    {
+        return this.submitter;
+    }
+
+    CharSequence sockName()
+    {
+        return this.color + " " + this.style;
+    }
+
+    CharSequence subDetails()
+    {
+        return "Submitted " + this.date + " by " + this.submitter.getFirstName();
     }
 
 }

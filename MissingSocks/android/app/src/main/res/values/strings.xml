@@ -14,6 +14,11 @@
 
     <string name="university">University</string>
 
+    <string name="sockname">sock</string>
+    <string name="location">sock</string>
+    <string name="subdetails">sock</string>
+    <string name="lostfound">sock</string>
+
     <string-array name="laundryroomtest">
         <item>Baker</item>
         <item>Will Rice</item>
