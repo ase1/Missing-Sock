@@ -17,4 +17,5 @@
         parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@drawable/argyle</item>
     </style>
+
 </resources>
