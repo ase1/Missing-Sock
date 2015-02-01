@@ -6,4 +6,11 @@
     <string name="action_settings">Settings</string>
     <string name="filter">Filter</string>
     <string name="sockfiller">White Crew Sock</string>
+    <string name="title_activity_profile">profile</string>
+
+    <string-array name="universities">
+        <item>Rice University</item>
+        <item>UT Austin</item>
+    </string-array>
+    <string name="university">University</string>
 </resources>
