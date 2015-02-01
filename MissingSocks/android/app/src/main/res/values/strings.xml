@@ -14,11 +14,36 @@
         <item>Rice University</item>
         <item>UT Austin</item>
     </string-array>
+
     <string name="university">University</string>
 
     <string-array name="laundryroomtest">
         <item>Will Rice</item>
         <item>Hanszen</item>
     </string-array>
+
     <string name="laundryrooms">Laundry Rooms</string>
+    <string name="title_activity_add_edit_sock">add_edit_sock</string>
+
+    <string name="multiother">Multi-colored/Other</string>
+    <string name="gender_label">Sock Gender</string>
+
+    <string-array name="sockgender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Unisex/Unknown</item>
+    </string-array>
+
+    <string name="style_label">Sock Style</string>
+
+    <string-array name="styles">
+        <item>No-Show</item>
+        <item>Liner/Pad</item>
+        <item>Quarter/Anklet</item>
+        <item>Mid-Calf/Crew</item>
+        <item>Over-the-Calf/Executive</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="description">Description</string>
 </resources>
