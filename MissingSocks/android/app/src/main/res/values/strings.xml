@@ -6,4 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="filter">Filter</string>
     <string name="sockfiller">White Crew Sock</string>
+    <string name="locfiller">Jones Laundry Room</string>
+    <string name="submfiller">Submitted yesterday by Haibo Chen</string>
 </resources>
