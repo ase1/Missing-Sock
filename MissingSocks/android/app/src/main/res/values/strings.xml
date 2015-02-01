@@ -6,8 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="filter">Filter</string>
     <string name="sockfiller">White Crew Sock</string>
-    <string name="locfiller">Jones Laundry Room</string>
-    <string name="submfiller">Submitted yesterday by Haibo Chen</string>
     <string name="title_activity_profile">profile</string>
 
     <string-array name="universities">
@@ -15,4 +13,10 @@
         <item>UT Austin</item>
     </string-array>
     <string name="university">University</string>
+
+    <string-array name="laundryroomtest">
+        <item>Will Rice</item>
+        <item>Hanszen</item>
+    </string-array>
+    <string name="laundryrooms">Laundry Rooms</string>
 </resources>
