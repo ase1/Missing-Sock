@@ -84,7 +84,8 @@
         android:id="@+id/update_button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="updateButton"/>
 
     <Button
         android:layout_width="200dp"
@@ -95,7 +96,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/update_button"
-        android:layout_toLeftOf="@+id/update_button" />
+        android:layout_toLeftOf="@+id/update_button"
+        android:onClick="backToBrowse"/>
 
     <TextView
         android:layout_width="match_parent"

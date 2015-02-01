@@ -7,13 +7,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-
 public class view_sock extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_sock);
+        setTitle("View Sock");
     }
 
 
@@ -22,12 +22,6 @@ public class view_sock extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_view_sock, menu);
         return true;
-    }
-
-    public void backToStart(View view)
-    {
-        Intent intent = new Intent(this, Browse.class);
-        startActivity(intent);
     }
 
     @Override
@@ -43,5 +37,11 @@ public class view_sock extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void backtohome(View view)
+    {
+        Intent intent = new Intent(this, Browse.class);
+        startActivity(intent);
     }
 }

@@ -3,6 +3,7 @@ package com.aelsey.missingsocks;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,9 +30,15 @@ public class add_edit_sock extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_sock);
+
+        setTitle("Add/Edit Sock");
     }
 
-
+    public void backToBrowse(View view)
+    {
+        Intent intent = new Intent(this, Browse.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

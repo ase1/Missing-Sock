@@ -1,9 +1,11 @@
 package com.aelsey.missingsocks;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class profile extends ActionBarActivity {
@@ -12,8 +14,19 @@ public class profile extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        setTitle("Edit Profile");
+
+    }
+    public void backToBrowse(View view)
+    {
+        Intent intent = new Intent(this, Browse.class);
+        startActivity(intent);
     }
 
+    public void updateButton(View view)
+    {
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -29,10 +42,6 @@ public class profile extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
