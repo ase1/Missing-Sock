@@ -13,4 +13,10 @@
         <item>UT Austin</item>
     </string-array>
     <string name="university">University</string>
+
+    <string-array name="laundryroomtest">
+        <item>Will Rice</item>
+        <item>Hanszen</item>
+    </string-array>
+    <string name="laundryrooms">Laundry Rooms</string>
 </resources>
