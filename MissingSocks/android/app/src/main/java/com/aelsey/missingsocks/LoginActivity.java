@@ -16,6 +16,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,13 +29,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.util.Log;
 
 
 /**
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
-
+    private static final String TAG = LoginActivity.class.getSimpleName();
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
@@ -68,7 +70,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == R.id.login || id == EditorInfo.IME_NULL) {
                     attemptLogin();
-                    return true;
+                    while (true);
+
                 }
                 return false;
             }
@@ -146,7 +149,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
+        return email.length() > 4;
     }
 
     private boolean isPasswordValid(String password) {

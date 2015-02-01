@@ -1,12 +1,22 @@
 package com.aelsey.missingsocks;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class add_edit_sock extends ActionBarActivity {
+
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +47,43 @@ public class add_edit_sock extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void setselected(View view) {
+    public void testClick(View v) {
+        // The code to be executed on click
 
+
+
+        EditText date_obj = (EditText) findViewById(R.id.date);
+        CharSequence date_val = date_obj.getText();
+        System.out.println("Hi");
+        if (date_val == null){
+            alertmessage("Blank Date"); System.out.println("if statement");
+        }
+
+    }
+    public void alertmessage(String message) {
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+
+        // set title
+        alertDialogBuilder.setTitle("Invalid Input");
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage(message)
+                .setCancelable(false)
+                .setNegativeButton("Ok",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, just close
+                        // the dialog box and do nothing
+                        dialog.cancel();
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
     }
 }

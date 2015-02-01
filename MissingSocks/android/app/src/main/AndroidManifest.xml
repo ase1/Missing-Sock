@@ -21,19 +21,21 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateVisible" >
+
+
         </activity>
         <activity
             android:name=".profile"
             android:label="@string/title_activity_profile" >
+        </activity>
+        <activity
+            android:name=".add_edit_sock"
+            android:label="@string/title_activity_add_edit_sock" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".add_edit_sock"
-            android:label="@string/title_activity_add_edit_sock" >
         </activity>
     </application>
 

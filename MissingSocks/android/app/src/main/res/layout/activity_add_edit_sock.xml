@@ -50,9 +50,7 @@
         android:prompt="@string/university"
         android:layout_below="@+id/date"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/black"
-        android:layout_toEndOf="@+id/black" />
+        android:layout_alignParentEnd="true" />
 
     <Spinner
         android:id="@+id/laundryrooms"
@@ -62,129 +60,110 @@
         android:prompt="@string/laundryrooms"
         android:layout_below="@+id/universities"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/beige"
-        android:layout_alignStart="@+id/beige" />
+        android:layout_alignParentEnd="true" />
+    <RadioGroup
 
-    <Button
-        android:layout_width="50sp"
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/laundryrooms"
+        android:layout_alignRight="@+id/update_button"
+        android:layout_alignEnd="@+id/update_button">
+
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/white"
-        android:background="#ffffffff"
-        android:layout_below="@+id/laundryrooms"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="setselected"/>
+        android:background="#ffffffff" />
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/black"
         android:background="#ff000000"
-        android:layout_below="@+id/laundryrooms"
-        android:layout_toRightOf="@+id/white"
-        android:layout_toEndOf="@+id/white" />
+        android:layout_gravity="center_horizontal" />
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/beige"
-        android:background="#ffffd9a8"
-        android:layout_below="@+id/laundryrooms"
-        android:layout_toRightOf="@+id/black"
-        android:layout_toEndOf="@+id/black" />
+        android:background="#ffffd9a8"/>
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/gray"
-        android:background="#ff808080"
-        android:layout_below="@+id/laundryrooms"
-        android:layout_toRightOf="@+id/beige"
-        android:layout_toEndOf="@+id/beige" />
+        android:background="#ff808080"/>
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/brown"
-        android:background="#ff9a5512"
-        android:layout_below="@+id/laundryrooms"
-        android:layout_toRightOf="@+id/gray"
-        android:layout_toEndOf="@+id/gray" />
+        android:background="#ff9a5512"/>
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/red"
-        android:background="#ffff0007"
-        android:layout_below="@+id/laundryrooms"
-        android:layout_toRightOf="@+id/brown"
-        android:layout_toEndOf="@+id/brown" />
+        android:background="#ffff0007"/>
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/orange"
-        android:background="#ffff7914"
-        android:layout_below="@+id/laundryrooms"
-        android:layout_toRightOf="@+id/red"
-        android:layout_toEndOf="@+id/red" />
+        android:background="#ffff7914"/>
+    </RadioGroup>
 
-    <Button
-        android:layout_width="50sp"
+    <RadioGroup
+
+        android:id="@+id/radiogroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/radiogroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/pink"
-        android:background="#ffff54ab"
-        android:layout_below="@+id/white"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:background="#ffff54ab" />
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/yellow"
-        android:background="#fffffb23"
-        android:layout_below="@+id/white"
-        android:layout_toRightOf="@+id/pink"
-        android:layout_toEndOf="@+id/pink" />
+        android:background="#fffffb23" />
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/green"
-        android:background="#ff15ff00"
-        android:layout_below="@+id/white"
-        android:layout_toRightOf="@+id/yellow"
-        android:layout_toEndOf="@+id/yellow" />
+        android:background="#ff15ff00" />
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/blue"
-        android:background="#ff053bff"
-        android:layout_below="@+id/white"
-        android:layout_toRightOf="@+id/green"
-        android:layout_toEndOf="@+id/green" />
+        android:background="#ff053bff" />
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="40sp"
         android:layout_height="wrap_content"
         android:id="@+id/purple"
-        android:background="#ffb51bff"
-        android:layout_below="@+id/white"
-        android:layout_toRightOf="@+id/blue"
-        android:layout_toEndOf="@+id/blue" />
+        android:background="#ffb51bff" />
 
-    <Button
-        android:layout_width="50sp"
+    <RadioButton
+        android:layout_width="110sp"
         android:layout_height="wrap_content"
         android:id="@+id/other"
         android:text="@string/multiother"
-        android:background="#ffffff"
-        android:layout_below="@+id/white"
-        android:layout_toRightOf="@+id/purple"
-        android:layout_alignRight="@+id/orange"
-        android:layout_alignEnd="@+id/orange" />
+        android:textSize="12sp"
+        android:background="#ffffff" />
+    </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
@@ -206,11 +185,9 @@
         android:layout_height="wrap_content"
         android:entries="@array/sockgender"
         android:prompt="@string/gender_label"
-        android:layout_below="@+id/other"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/green"
-        android:layout_alignStart="@+id/green" />
+        android:layout_below="@+id/style_dropdown"
+        android:layout_alignRight="@+id/update_button"
+        android:layout_alignEnd="@+id/update_button" />
 
     <Spinner
         android:id="@+id/style_dropdown"
@@ -218,9 +195,9 @@
         android:layout_height="wrap_content"
         android:entries="@array/styles"
         android:prompt="@string/style_label"
-        android:layout_below="@+id/gender_dropdown"
-        android:layout_alignLeft="@+id/gender_dropdown"
-        android:layout_alignStart="@+id/gender_dropdown" />
+        android:layout_below="@+id/radiogroup2"
+        android:layout_alignRight="@+id/update_button"
+        android:layout_alignEnd="@+id/update_button" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -237,16 +214,13 @@
         android:layout_toStartOf="@+id/gender_dropdown" />
 
     <Switch
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lostfound"
-        android:layout_below="@+id/addeditsock"
         android:textOn="Lost"
         android:textOff="Found"
-        android:layout_alignLeft="@+id/beige"
-        android:layout_alignStart="@+id/beige"
-        android:layout_alignRight="@+id/brown"
-        android:layout_alignEnd="@+id/brown" />
+        android:layout_below="@+id/addeditsock"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -257,20 +231,21 @@
         android:gravity="center_vertical"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/style_dropdown"
-        android:layout_toStartOf="@+id/style_dropdown"
-        android:layout_below="@+id/style_dropdown"
-        android:layout_alignBottom="@+id/descriptiontext" />
+        android:layout_toStartOf="@+id/descriptiontext"
+        android:layout_alignBottom="@+id/descriptiontext"
+        android:layout_toLeftOf="@+id/descriptiontext"
+        android:layout_below="@+id/gender_dropdown" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:id="@+id/descriptiontext"
-        android:layout_below="@+id/style_dropdown"
-        android:layout_toRightOf="@+id/yellow"
-        android:layout_alignRight="@+id/other"
-        android:layout_alignEnd="@+id/other" />
+        android:layout_below="@+id/gender_dropdown"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/gender_label"
+        android:layout_toEndOf="@+id/gender_label" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -298,9 +273,9 @@
         android:layout_height="wrap_content"
         android:text="Update"
         android:id="@+id/update_button"
-        android:layout_below="@+id/descriptiontext"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="0dp" />
+        android:onClick="testClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/radiogroup2"
+        android:layout_alignEnd="@+id/radiogroup2" />
+
 </RelativeLayout>
