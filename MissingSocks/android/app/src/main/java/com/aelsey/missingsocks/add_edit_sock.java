@@ -89,7 +89,7 @@ public class add_edit_sock extends ActionBarActivity {
         String gender_val = gender_obj.getSelectedItem().toString();
         System.out.println(gender_val);
 
-        EditText description_obj = (EditText) findViewById(R.id.description);
+        EditText description_obj = (EditText) findViewById(R.id.descriptiontext);
         CharSequence description_val = description_obj.getText();
         System.out.println(description_val);
 

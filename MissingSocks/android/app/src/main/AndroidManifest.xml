@@ -16,11 +16,7 @@
         <activity
             android:name=".Browse"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -34,6 +30,15 @@
         <activity
             android:name=".add_edit_sock"
             android:label="@string/title_activity_add_edit_sock" >
+        </activity>
+        <activity
+            android:name=".view_sock"
+            android:label="@string/title_activity_view_sock" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
