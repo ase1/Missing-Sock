@@ -24,7 +24,6 @@
 
     <string name="laundryrooms">Laundry Rooms</string>
     <string name="title_activity_add_edit_sock">add_edit_sock</string>
-
     <string name="multiother">Multi-colored/Other</string>
     <string name="gender_label">Sock Gender</string>
 
@@ -46,4 +45,12 @@
     </string-array>
 
     <string name="description">Description</string>
+    <string name="title_activity_nav_drawer">NavDrawer</string>
+    <string name="title_section1">User Stats</string>
+    <string name="title_section2">My Socks</string>
+    <string name="title_section3">App Preferences</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+
 </resources>

@@ -1,63 +1,63 @@
 package com.aelsey.missingsocks;
 
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.app.ListActivity;
+import android.app.ListFragment;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.*;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
-import java.util.ArrayList;
-import org.w3c.dom.Element;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 
-public class Browse extends ListActivity {
-    ListView listView;
+import com.melnykov.fab.FloatingActionButton;
+
+import java.util.ArrayList;import java.util.Locale;
+
+
+public class Browse extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        MyFragment fragment = new MyFragment();
+        fragmentTransaction.replace(R.id.listfragment, fragment);
+        fragmentTransaction.commit();
 
-        //get sock info
-        ArrayList<String> sockName = new ArrayList<String>();
-        sockName.add("White Crew Sock");
-        sockName.add("Black Ankle Sock");
-        sockName.add("Pink Knee-High Sock");
-        ArrayList<String> location = new ArrayList<String>();
-        location.add("Duncan");
-        location.add("Hanszen");
-        location.add("WRC");
-        ArrayList<String> submitted = new ArrayList<String>();
-        submitted.add("Submitted today by Roshni");
-        submitted.add("Submitted two days ago by Andrew");
-        submitted.add("Submitted a week ago by Mohith");
-
-        listView = (ListView) findViewById(R.id.listView);
-        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.list_row, R.id.listView,sockName));
-
+        ListView listView = (ListView) findViewById(android.R.id.list);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.attachToListView(listView);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_browse, menu);
-        return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_browse, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case android.R.id.home: {
+                finish();
+                break;
+            }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            default: {
+                break;
+            }
         }
-
-        return super.onOptionsItemSelected(item);
+        return true;
     }
+
 }

@@ -1,37 +1,69 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Browse">
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+    <FrameLayout
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:name="com.aelsey.missingsocks.MyFragment"
+        android:id="@+id/listfragment">
 
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/scrollView1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
 
 
 
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="232dp"
-                android:id="@+id/listView"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:nestedScrollingEnabled="false"
-            />
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="496dp"
+                    android:id="@+id/android:list"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:nestedScrollingEnabled="false"
+                />
 
-        </LinearLayout>
-    </ScrollView>
+            </LinearLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fab="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@android:id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.melnykov.fab.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/addsock"
+                    fab:fab_colorNormal="#4c4c4e"
+                    fab:fab_colorPressed="#577484"
+                    fab:fab_colorRipple="#d7d3ad" />
+            </FrameLayout>
+        </ScrollView>
+    </FrameLayout>
+    >
+
 
 
 </RelativeLayout>

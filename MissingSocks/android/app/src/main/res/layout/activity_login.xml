@@ -14,7 +14,7 @@
         android:layout_height="200sp"
         android:id="@+id/socklogo"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/sock_logo" />
+        android:src="@drawable/socklogo" />
 
     <TextView
         android:layout_width="wrap_content"
