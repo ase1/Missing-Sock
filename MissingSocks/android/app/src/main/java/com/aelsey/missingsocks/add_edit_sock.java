@@ -36,4 +36,8 @@ public class add_edit_sock extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void setselected(View view) {
+
+    }
 }
