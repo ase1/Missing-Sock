@@ -18,6 +18,10 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -101,13 +105,27 @@ public class add_edit_sock extends ActionBarActivity {
         System.out.println(description_val);
 
 
-        JSONObject jo = new JSONObject();
+        JSONObject json = new JSONObject();
         try {
-            jo.put("firstName", "John");
-            jo.put("lastName", "Doe");
+            json.put("someKey", "someValue");
         }
-        catch (JSONException e) {
-            System.out.println("error json");
+        catch(JSONException e) {
+            System.out.println("JSON error");
+        }
+
+        HttpClient httpClient = new DefaultHttpClient();
+
+        try {
+            HttpPost request = new HttpPost("http://yoururl");
+            StringEntity params = new StringEntity(json.toString());
+            request.addHeader("content-type", "application/json");
+            request.setEntity(params);
+            httpClient.execute(request);
+        // handle response here...
+        } catch (Exception ex) {
+            // handle exception here
+        } finally {
+            httpClient.getConnectionManager().shutdown();
         }
 
         /*if (date_val == null){
