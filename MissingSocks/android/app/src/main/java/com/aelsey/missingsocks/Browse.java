@@ -1,5 +1,6 @@
 package com.aelsey.missingsocks;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.app.FragmentManager;
@@ -22,6 +23,7 @@ public class Browse extends ActionBarActivity {
         fragmentTransaction.replace(R.id.listfragment, fragment);
         fragmentTransaction.commit();
 
+        setTitle("Browse Socks");
 
     }
 
@@ -30,6 +32,7 @@ public class Browse extends ActionBarActivity {
         Intent intent = new Intent(this, add_edit_sock.class);
         startActivity(intent);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -41,14 +44,18 @@ public class Browse extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.filter: {
+            case R.id.filterbutton: {
                 Intent intent = new Intent(this, Filter.class);
                 startActivity(intent);
                 return true;
             }
-
-            default: {
+            case R.id.profilebutton: {
+                Intent intent = new Intent(this, profile.class);
+                startActivity(intent);
                 return true;
+            }
+            default: {
+                return false;
             }
         }
     }

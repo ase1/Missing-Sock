@@ -13,6 +13,7 @@ public class view_sock extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_sock);
+        setTitle("View Sock");
     }
 
 
@@ -38,7 +39,7 @@ public class view_sock extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void backtohoome(View view)
+    public void backtohome(View view)
     {
         Intent intent = new Intent(this, Browse.class);
         startActivity(intent);

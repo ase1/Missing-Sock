@@ -40,7 +40,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/cancel_button"
-        android:layout_toRightOf="@+id/cancel_button" />
+        android:layout_toRightOf="@+id/cancel_button"/>
 
     <Spinner
         android:id="@+id/laundryrooms"
@@ -155,7 +155,8 @@
         android:id="@+id/cancel_button"
         android:layout_alignTop="@+id/update_button"
         android:layout_alignLeft="@+id/yellow"
-        android:layout_alignStart="@+id/yellow" />
+        android:layout_alignStart="@+id/yellow"
+        android:onClick="backToBrowse"/>
 
     <Button
         android:layout_width="150dp"
