@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -53,6 +54,15 @@ public class add_edit_sock extends ActionBarActivity {
         setContentView(R.layout.activity_add_edit_sock);
 
         setTitle("Add/Edit Sock");
+
+        int loader = R.drawable.insert_pic_icon;
+        ImageView image = (ImageView) findViewById(R.id.imageButton);
+        String image_url = "http://travel.spotcoolstuff.com/wp-content/uploads/2010/12/best-socks-mismatched.jpg";
+        ImageLoader imgLoader = new ImageLoader(getApplicationContext());
+        // image_url - is image url path
+        // loader - loader image, will be shown before loading image
+        // image - is ImageView
+        imgLoader.DisplayImage(image_url, loader, image);
     }
 
     public void backToBrowse(View view) {
@@ -82,7 +92,7 @@ public class add_edit_sock extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+/*
     public class DownloadTask extends AsyncTask<String, Void, String> {
 
         @Override
@@ -98,15 +108,15 @@ public class add_edit_sock extends ActionBarActivity {
          * Uses the logging framework to display the output of the fetch
          * operation in the log fragment.
          */
-        @Override
+        //@Override
         //protected void onPostExecute(String result) {
         //Log.i(TAG, result);
-        //}
-    }
+        //}*/
+    /*}
 
     /**
      * Initiates the fetch operation.
-     */
+     *//*
     public String loadFromNetwork(String urlString) throws IOException {
         InputStream stream = null;
         String str = "";
@@ -160,7 +170,7 @@ public class add_edit_sock extends ActionBarActivity {
         EditText description_obj = (EditText) findViewById(R.id.descriptiontext);
         CharSequence description_val = description_obj.getText();
         System.out.println(description_val);
-    }
+    }*/
         /*
         URL url;
         HttpURLConnection conn;
@@ -190,20 +200,19 @@ public class add_edit_sock extends ActionBarActivity {
      * @param urlString A string representation of a URL.
      * @return An InputStream retrieved from a successful HttpURLConnection.
      * @throws java.io.IOException
-     */
+     *//*
     public InputStream downloadUrl(String urlString) throws IOException {
         // BEGIN_INCLUDE(get_inputstream)
         URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setReadTimeout(10000 /* milliseconds */);
-        conn.setConnectTimeout(15000 /* milliseconds */);
-        conn.setRequestMethod("GET");
-        conn.setDoInput(true);
+        conn.setReadTimeout(10000 /* milliseconds */
+        //conn.setConnectTimeout(15000 /* milliseconds */);
+        //conn.setRequestMethod("GET");
+        //conn.setDoInput(true);
         // Start the query
-        conn.connect();
-        InputStream stream = conn.getInputStream();
-        return stream;
+        //conn.connect();
+        //InputStream stream = conn.getInputStream();
+        //return stream;
         // END_INCLUDE(get_inputstream)
     }
 
-}

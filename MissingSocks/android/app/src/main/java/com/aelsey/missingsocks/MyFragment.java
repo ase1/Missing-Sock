@@ -80,7 +80,10 @@ import android.app.ListFragment;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
+
 import com.aelsey.missingsocks.R;
 
 import java.util.ArrayList;
@@ -175,13 +178,25 @@ public class MyFragment extends ListFragment {
             else
                 lostfound.add("Found");
 
-            String [] from = {location.get(i).toString(),subDetails.get(i).toString(),lostfound.get(i)toString(),sockName.get(i).toString()};
+            //String [] from_vals = {location.get(i).toString(),subDetails.get(i).toString(),lostfound.get(i)toString(),sockName.get(i).toString()};
 
         }
 
         int [] to = {R.id.location,R.id.subdetails,R.id.found,R.id.sockname};
-        for (int i = 1; i<8; i++)
-            this.setListAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_row,to,from(i)));
+        /*for (int i = 1; i<8; i++) {
+            this.setListAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_row, to, from_vals[i]));
+            mCursor = this.getContentResolver().query(People.CONTENT_URI, null, null, null, null);
+            startManagingCursor(mCursor);
+
+            ListAdapter adapter = new SimpleCursorAdapter(
+                    this, // Context.
+                    android.R.layout.two_line_list_item,  // Specify the row template to use (here, two columns bound to the two retrieved cursor
+                    mCursor,                                              // Pass in the cursor to bind to.
+            from_vals[i],           // Array of cursor columns to bind to.
+            to;
+
+            setListAdapter(adapter);*/
+
     }
 
 
