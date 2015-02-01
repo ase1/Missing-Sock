@@ -1,28 +1,17 @@
 package com.aelsey.missingsocks;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.Fragment;
+import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.app.ListActivity;
-import android.app.ListFragment;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.*;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-
-import com.melnykov.fab.FloatingActionButton;
-
-import java.util.ArrayList;import java.util.Locale;
 
 
-public class Browse extends Activity {
+
+public class Browse extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +22,13 @@ public class Browse extends Activity {
         fragmentTransaction.replace(R.id.listfragment, fragment);
         fragmentTransaction.commit();
 
-        ListView listView = (ListView) findViewById(android.R.id.list);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.attachToListView(listView);
+
+    }
+
+    public void addASock(View view)
+    {
+        Intent intent = new Intent(this, add_edit_sock.class);
+        startActivity(intent);
     }
 
     @Override
@@ -48,16 +41,16 @@ public class Browse extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home: {
-                finish();
-                break;
+            case R.id.filter: {
+                Intent intent = new Intent(this, Filter.class);
+                startActivity(intent);
+                return true;
             }
 
             default: {
-                break;
+                return true;
             }
         }
-        return true;
     }
 
 }
