@@ -99,15 +99,5 @@
         android:layout_toLeftOf="@+id/update_button"
         android:onClick="backToBrowse"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Edit Profile"
-        android:gravity="center"
-        android:id="@+id/editprofile"
-        android:layout_above="@+id/firstname"
-        android:layout_centerHorizontal="true" />
-
 
 </RelativeLayout>

@@ -41,8 +41,8 @@
             android:label="@string/title_activity_view_sock" >
         </activity>
         <activity
-            android:name=".filter"
-            android:label="@string/title_activity_filter" >
+            android:name=".Filter"
+            android:label="@string/title_activity_Filter" >
         </activity>
 		
     </application>

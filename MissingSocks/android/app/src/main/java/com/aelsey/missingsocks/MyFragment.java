@@ -7,12 +7,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.aelsey.missingsocks.R;
 import java.util.ArrayList;
+import com.aelsey.missingsocks.Sock;
 
 public class MyFragment extends ListFragment {
 
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        
         //get sock info
         ArrayList<String> sockName = new ArrayList<String>();
         sockName.add("White Crew Sock");
