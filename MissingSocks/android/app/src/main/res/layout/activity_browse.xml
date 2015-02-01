@@ -8,7 +8,8 @@
     <FrameLayout
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
-        android:id="@+id/myfragmentholder">
+        android:name="com.aelsey.missingsocks.MyFragment"
+        android:id="@+id/listfragment">
 
         <ScrollView
             android:id="@+id/scrollView1"
@@ -39,5 +40,7 @@
         </ScrollView>
     </FrameLayout>
     >
+
+
 
 </RelativeLayout>

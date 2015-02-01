@@ -12,7 +12,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/CustomActionBarTheme" >
         <activity
             android:name=".Browse"
             android:label="@string/app_name" >
@@ -38,6 +38,10 @@
         <activity
             android:name=".blankactivitywithfrag"
             android:label="@string/title_activity_blankactivitywithfrag" >
+        </activity>
+        <activity
+            android:name=".NavDrawer"
+            android:label="@string/title_activity_nav_drawer" >
         </activity>
     </application>
 
