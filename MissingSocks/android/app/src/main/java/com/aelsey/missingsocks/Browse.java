@@ -9,24 +9,33 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.support.v7.app.*;
+import android.os.AsyncTask;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 
-import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
-import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
-import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
+import com.microsoft.windowsazure.mobileservices.*;
 
 import java.net.MalformedURLException;
 import com.google.gson.GsonBuilder;
 
 public class Browse extends ActionBarActivity {
     private MobileServiceClient mClient;
-
+    private MobileServiceTable<Person> personTable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
         try {
-            mClient = new MobileServiceClient("https://sockharmony.azure-mobile.net/","iDufFyBapaBzJKXngUllgyaUoDzhTV32",this);
+            mClient = new MobileServiceClient("https://sockharmony.azure-mobile.net/", "iDufFyBapaBzJKXngUllgyaUoDzhTV32", this);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -40,8 +49,8 @@ public class Browse extends ActionBarActivity {
         setTitle("Browse Socks");
 
 
-        Person adam = new Person("thefirstperson","Andrew","Elsey","ase1@rice.edu", "727-432-0804",true, 5, "google.com");
-        Person eve = new Person("thesecondperson","Andrew","Elsey","elsey.andrew@gmail.com", "727-432-0804",true, 5, "aelsey.com");
+        Person adam = new Person("thefirstperson", "Andrew", "Elsey", "ase1@rice.edu", "727-432-0804", true, 5, "google.com");
+        Person eve = new Person("thesecondperson", "Andrew", "Elsey", "elsey.andrew@gmail.com", "727-432-0804", true, 5, "aelsey.com");
 
         mClient.getTable(Person.class).insert(eve, new TableOperationCallback<Person>() {
             public void onCompleted(Person entity, Exception exception, ServiceFilterResponse response) {
@@ -53,6 +62,31 @@ public class Browse extends ActionBarActivity {
             }
         });
     }
+
+//        // Get the items add them in the adapter
+//	    new AsyncTask<Void, Void, Void>() {
+//	        @Override
+//	        protected Void doInBackground(Void... params) {
+//	            try {
+//	                final MobileServiceList<Person> result = personTable.where().field("complete").eq(false).execute().get();
+//	                runOnUiThread(new Runnable() {
+//
+//	                    @Override
+//	                    public void run() {
+//	                        mAdapter.clear();
+//
+//	                        for (Person adam : result) {
+//	                            mAdapter.add(adam);
+//	                        }
+//	                    }
+//	                });
+//	            } catch (Exception exception) {
+//	                createAndShowDialog(exception, "Error");
+//	            }
+//	            return null;
+//	        }
+//	    }.execute();
+//    }
 
     public void addASock(View view)
     {

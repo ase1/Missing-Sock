@@ -8,14 +8,14 @@
 
     <!-- the theme applied to the application or activity -->
     <style name="CustomActionBarTheme"
-        parent="Theme.AppCompat.Light.DarkActionBar">
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="floatingActionButtonStyle">@style/AppTheme.Fab</item>
     </style>
 
     <!-- ActionBar styles -->
     <style name="MyActionBar"
-        parent="@android:style/Widget.Holo.Light.ActionBar">
+        parent="@style/Widget.AppCompat.Light.ActionBar">
         <item name="android:background">@drawable/argyle</item>
     </style>
 
