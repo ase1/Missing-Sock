@@ -13,10 +13,12 @@ public class Sock {
     private String style;
     private String gender;
     private CharSequence description;
-    private Person submitter;
+    //private Person submitter;
+    private int id;
 
-    public Sock(CharSequence date, boolean lostFound, String university, String laundryroom,
-                String color, String style, String gender, CharSequence description, Person submitter) {
+    public Sock(int id, CharSequence date, boolean lostFound, String university, String laundryroom,
+                String color, String style, String gender, CharSequence description) {
+        this.id=id;
         this.date = date;
         this.lostFound = lostFound;
         this.university = university;
@@ -25,7 +27,7 @@ public class Sock {
         this.style = style;
         this.gender = gender;
         this.description = description;
-        this.submitter = submitter;
+        //this.submitter = submitter;
     }
 
     CharSequence getDate()
@@ -61,19 +63,19 @@ public class Sock {
     {
         return this.description;
     }
-    Person getSubmitter()
+    /*Person getSubmitter()
     {
         return this.submitter;
-    }
+    }*/
 
     CharSequence sockName()
     {
         return this.color + " " + this.style;
     }
 
-    CharSequence subDetails()
+    /*CharSequence subDetails()
     {
         return "Submitted " + this.date + " by " + this.submitter.getFirstName();
-    }
+    }*/
 
 }

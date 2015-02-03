@@ -1,30 +1,36 @@
 package com.aelsey.missingsocks;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.*;
+import android.view.View;
 
-/*
-import org.apache.http.Header;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.*;
-import com.loopj.android.http.*;
-*/
+import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.ServiceFilterResponse;
+import com.microsoft.windowsazure.mobileservices.TableOperationCallback;
 
+import java.net.MalformedURLException;
+import com.google.gson.GsonBuilder;
 
 public class Browse extends ActionBarActivity {
+    private MobileServiceClient mClient;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
+        try {
+            mClient = new MobileServiceClient("https://sockharmony.azure-mobile.net/","iDufFyBapaBzJKXngUllgyaUoDzhTV32",this);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         MyFragment fragment = new MyFragment();
@@ -34,12 +40,18 @@ public class Browse extends ActionBarActivity {
         setTitle("Browse Socks");
 
 
-        /*try {
-            getPublicTimeline();
-        }
-        catch (Exception ex){
-            ex.printStackTrace();
-        }*/
+        Person adam = new Person("thefirstperson","Andrew","Elsey","ase1@rice.edu", "727-432-0804",true, 5, "google.com");
+        Person eve = new Person("thesecondperson","Andrew","Elsey","elsey.andrew@gmail.com", "727-432-0804",true, 5, "aelsey.com");
+
+        mClient.getTable(Person.class).insert(eve, new TableOperationCallback<Person>() {
+            public void onCompleted(Person entity, Exception exception, ServiceFilterResponse response) {
+                if (exception == null) {
+                    System.out.println("SUCCESS");
+                } else {
+                    System.out.println("Failure.");
+                }
+            }
+        });
     }
 
     public void addASock(View view)
@@ -48,26 +60,6 @@ public class Browse extends ActionBarActivity {
         startActivity(intent);
     }
 
-
-    /*public void getPublicTimeline() throws JSONException {
-        RequestParams params = new RequestParams();
-        params.put("userId","username");
-        TwitterRestClient.post("check/", params, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                System.out.println(statusCode + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-                System.out.println(response.toString());
-                // If the response is JSONObject instead of expected JSONArray
-            }
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
-                System.out.println(statusCode + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-
-                System.out.println(timeline.toString());
-            }
-        });
-    }*/
 
 
     @Override

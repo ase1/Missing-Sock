@@ -4,17 +4,19 @@ package com.aelsey.missingsocks;
  * Created by Andrew on 02.01.2015.
  */
 public class Person {
-    private CharSequence firstName;
-    private CharSequence lastName;
-    private CharSequence email;
-    private CharSequence phone;
-    private boolean preferEmail;
-    private int matches;
-    private CharSequence picURL;
+    public CharSequence firstName;
+    public CharSequence lastName;
+    public CharSequence email;
+    public CharSequence phone;
+    public boolean preferEmail;
+    public int matches;
+    public CharSequence picURL;
+    public String id;
 
-    public Person (CharSequence firstName, CharSequence lastName, CharSequence email,
+    public Person (String id, CharSequence firstName, CharSequence lastName, CharSequence email,
                    CharSequence phone, boolean preferEmail, int matches, CharSequence picURL)
     {
+        this.id=id;
         this.firstName=firstName;
         this.lastName=lastName;
         this.email=email;
@@ -22,6 +24,10 @@ public class Person {
         this.preferEmail=preferEmail;
         this.matches=matches;
         this.picURL=picURL;
+    }
+    String getId()
+    {
+        return this.id;
     }
     CharSequence getFirstName()
     {
