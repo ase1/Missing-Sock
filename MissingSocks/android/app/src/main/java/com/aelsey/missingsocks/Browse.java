@@ -63,38 +63,11 @@ public class Browse extends ActionBarActivity {
         });
     }
 
-//        // Get the items add them in the adapter
-//	    new AsyncTask<Void, Void, Void>() {
-//	        @Override
-//	        protected Void doInBackground(Void... params) {
-//	            try {
-//	                final MobileServiceList<Person> result = personTable.where().field("complete").eq(false).execute().get();
-//	                runOnUiThread(new Runnable() {
-//
-//	                    @Override
-//	                    public void run() {
-//	                        mAdapter.clear();
-//
-//	                        for (Person adam : result) {
-//	                            mAdapter.add(adam);
-//	                        }
-//	                    }
-//	                });
-//	            } catch (Exception exception) {
-//	                createAndShowDialog(exception, "Error");
-//	            }
-//	            return null;
-//	        }
-//	    }.execute();
-//    }
-
     public void addASock(View view)
     {
         Intent intent = new Intent(this, add_edit_sock.class);
         startActivity(intent);
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

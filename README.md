@@ -1,1 +1,1 @@
-hello world
+This is the repo for the SockHarmony project, starting at HackRice 2015. SockHarmony is an app that reunites socks that were separated during the wash cycle. Find your sockmate. Download SockHarmony today (or when it's finished). 
